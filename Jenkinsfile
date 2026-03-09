@@ -11,12 +11,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/devopswithanisha/kubernetes-java-app.git'
-            }
-        }
-
         stage('Build Java Application') {
             steps {
                 sh 'mvn clean package'
