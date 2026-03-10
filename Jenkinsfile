@@ -67,7 +67,7 @@ pipeline {
             steps {
                 sh '''
                 kubectl set image deployment/java-calculator-deployment \
-                calculator=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$CALC_REPO:latest
+                java-calculator=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$CALC_REPO:latest
                 '''
             }
         }
@@ -76,7 +76,7 @@ pipeline {
             steps {
                 sh '''
                 kubectl set image deployment/hi-deployment \
-                hi-container=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$HI_REPO:latest
+                hi-html=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$HI_REPO:latest
                 '''
             }
         }
