@@ -8,7 +8,6 @@ pipeline {
         HI_REPO = "welcome"
         IMAGE_TAG = "latest"
     }
-
     stages {
 
         stage('Build Java Application') {
